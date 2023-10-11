@@ -1,0 +1,369 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*Reset the default browser stylings.
+Define your colors.
+Pick at least one font from Google Fonts.
+Define font sizes and line heights for default text elements (body, headers, etc.).
+Create link stylings with different stylings for normal, hover, active, and visited states.
+Include at least one button somewhere on your page and give it stylings for normal and hover states (e.g., decrease its opacity and have the mouse turn into a hand pointer on hover).
+*/
+
+/* 1.8 Link Done ! 
+
+https://codepen.io/PeterWorld-the-animator/pen/zYyyMya
+
+*/
+
+:root {
+    --primary-color: #357b70;
+    --secondary-color: #e0b354;
+    --dark-grey: #2b2b2b;
+    --button-color:red;
+    --link-color:blue;
+    --font-family:'Roboto Mono',monospace;
+    --font-weight: 500;
+    --font-size: 16px;
+  
+  }
+  a {
+    color: var(--primary-color);
+  }
+  
+  body{
+    background-color: rgba(125, 164, 196, 0.205);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    line-height: 1.5;
+    max-width: 1000px;
+    margin: auto;
+  
+  }
+  
+  
+  
+  h1{
+    font-size: var(--font-sizes);
+    font-weight: var(--font-weight);
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  h2,h3,p{
+    text-align: center;
+  }
+  
+  a {
+    color: var(--primary-color);
+  }
+  
+  a:visited {
+    /* visited link */
+    color: var(--link-color);
+  }
+  
+  a:hover {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }
+  
+  a:active {
+    /* selected link */
+    color: var(--button-color);
+  }
+  
+  button {
+    border: none;
+    font-family: inherit;
+    background-color: white;
+    color:var(--button-color);
+    text-decoration: none;
+    padding: 30px;
+  
+  }
+  
+  button:hover,button:focus{
+    cursor: pointer;
+    opacity: 0.8;
+    text-align: center;
+  }
+  
+  .profile_portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+  
+  .page_footer {
+    clear:both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    
+  }
+  
+  .profile{
+    max-width: 700px;
+    margin:0 auto;
+  }
+  
+  
+  
+  .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    
+  }
+  
+  .page-header_item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 200px;
+            flex: 0 1 200px;
+  }
+  
+  .page-header_item:last-child {
+    -webkit-box-flex:  1;
+        -ms-flex-positive:  1;
+            flex-grow:  1;
+    text-align: right;
+  }
+  
+  
+  .navigation-list{
+    list-style-type: none;
+    
+  }
+  
+  .navigation-list li{
+    display: inline-block;
+    margin-left:15px
+  }
+  
+  .navigation-list__item--active {
+    text-decoration: none;
+  }
+  
+  #logo {
+    width: 100px;
+    margin-left: 20px;
+    float: left;
+    padding-top: 23px;
+  }
+  
+  /* Grid Starts */
+  
+  *{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+   
+  /* start grid fallback */
+  
+   /* end grid fallback */
+  
+  @supports (display: grid) {
+    .grid {
+      display: -ms-grid;
+      display: grid;
+      /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+      -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      
+      grid-gap: 20px;
+    }
+  
+    .grid__item {
+      background-color: rgb(98, 189, 120); 
+      color:rgb(0, 0, 0)
+    }
+  
+    .grid__item:last-child{
+      
+          grid-column-start: 2;
+      -ms-grid-column-span: 1;
+      grid-column-end: 3;
+      
+          grid-row-start: 1;
+      -ms-grid-row-span:2;
+      grid-row-end:3;
+    }
+  
+    .grid__item:nth-child(2){
+     
+          grid-column-start: 3;
+      -ms-grid-column-span: 0;
+      grid-column-end: 3;
+ 
+          grid-row-start: 1;
+      -ms-grid-row-span:3;
+      grid-row-end:4;
+    }
+  
+   }
+  
+   /* 1.7 Media */
+  
+   @media all and (max-width: 500px) {
+    .grid {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      -ms-grid-columns: 1fr 20px 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap:10px;
+    }
+    .grid__item:last-child{
+      grid-column: auto/auto;
+      grid-row:auto/auto;
+    }
+    h1{
+      font-size:20px;
+    }
+  }
+  
+  .button, button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    
+  }
+  
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+  }
+  
+  @-webkit-keyframes color-change {
+    0% {
+      fill: #edc655;
+    }
+    50% {
+      fill: #fcffad;
+    }
+    100% {
+      fill: #f76414;
+    }
+  }
+  
+  @keyframes color-change {
+    0% {
+      fill: #edc655;
+    }
+    50% {
+      fill: #fcffad;
+    }
+    100% {
+      fill: #f76414;
+    }
+  }
+  
+  .sun {
+    -webkit-animation: 4s color-change infinite alternate linear;
+            animation: 4s color-change infinite alternate linear;
+  }
+  
+  @-webkit-keyframes cloud-move {
+    from {
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
+    }
+    to {
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
+    }
+  }
+  
+  @keyframes cloud-move {
+    from {
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
+    }
+    to {
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
+    }
+  }
+  /* Long version
+  .cloud-front {
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  */
+  .cloud-front {
+    -webkit-animation: 30s cloud-move infinite alternate linear;
+            animation: 30s cloud-move infinite alternate linear;
+  }
+  
+  @-webkit-keyframes cloud-move-reverse {
+    from {
+      -webkit-transform: translate(446px, 48px);
+              transform: translate(446px, 48px);
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+    }
+  }
+  
+  @keyframes cloud-move-reverse {
+    from {
+      -webkit-transform: translate(446px, 48px);
+              transform: translate(446px, 48px);
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+    }
+  }
+  .cloud-back {
+    -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+            animation: 34s cloud-move-reverse infinite alternate linear;
+  }
