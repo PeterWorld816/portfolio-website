@@ -28,18 +28,27 @@ asdasdasdas
     --font-family:'Roboto Mono',monospace;
     --font-weight: 500;
     --font-size: 16px;
-  
+    --background-color:rgba(214, 221, 202, 0.205);
+    --grid-background-color: rgb(135, 219, 160);
+    --grid-item-color: rgb(0, 0, 0) #a31129;
+    --button-border-bottom:rgba(0, 0, 0, 0.3);
+    --button-background-color:#357b70;
+    --button-text-color: white;
+    --line-height:1.5;
+    --opacity: 0.8;
+    --grid-column-end: 3;
+    --grid-row-start: 1;
   }
   a {
     color: var(--primary-color);
   }
   
   body{
-    background-color: rgba(125, 164, 196, 0.205);
+    background-color: var(--background-color);
     font-family: 'Roboto Mono', monospace;
     font-weight: var(--font-weight);
     font-size: var(--font-size);
-    line-height: 1.5;
+    line-height: var(--line-height);
     max-width: 1000px;
     margin: auto;
   
@@ -51,7 +60,7 @@ asdasdasdas
     font-size: var(--font-sizes);
     font-weight: var(--font-weight);
     font-style: italic;
-    line-height: 1.5;
+    line-height: var(--line-height);
     text-align: center;
   }
   
@@ -90,7 +99,7 @@ asdasdasdas
   
   button:hover,button:focus{
     cursor: pointer;
-    opacity: 0.8;
+    opacity: var(--opacity);
     text-align: center;
   }
   
@@ -188,7 +197,7 @@ asdasdasdas
     }
   
     .grid__item {
-      background-color: rgb(98, 189, 120); 
+      background-color: var(--grid-background-color);
       color:rgb(0, 0, 0)
     }
   
@@ -196,9 +205,9 @@ asdasdasdas
       
           grid-column-start: 2;
       -ms-grid-column-span: 1;
-      grid-column-end: 3;
+      grid-column-end: var(--grid-column-end);
       
-          grid-row-start: 1;
+          grid-row-start: var(--grid-row-start);
       -ms-grid-row-span:2;
       grid-row-end:3;
     }
@@ -207,9 +216,9 @@ asdasdasdas
      
           grid-column-start: 3;
       -ms-grid-column-span: 0;
-      grid-column-end: 3;
+      grid-column-end: var(--grid-column-end);
  
-          grid-row-start: 1;
+          grid-row-start: var(--grid-row-start);
       -ms-grid-row-span:3;
       grid-row-end:4;
     }
@@ -241,7 +250,7 @@ asdasdasdas
       grid-row:auto/auto;
     }
     h1{
-      font-size:20px;
+      font-size:var(--font-size);
     }
   }
   
@@ -252,13 +261,13 @@ asdasdasdas
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles the button */
-    background-color: #357b70;
-    color: white;
+    background-color:var(--button-background-color);
+    color:var(--button-text-color);
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
     /* width of the border, type, color */
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--button-border-bottom);
     -webkit-transition-duration: 0.2s;
          -o-transition-duration: 0.2s;
             transition-duration: 0.2s;
