@@ -32,7 +32,8 @@ asdasdasdas
     --grid-background-color: rgb(135, 219, 160);
     --grid-item-color: rgb(0, 0, 0) #a31129;
     --button-border-bottom:rgba(0, 0, 0, 0.3);
-    --button-text-color: white;
+    --button-text-color: rgb(226, 231, 224);
+    --button-background-color:#357b70;
     --line-height:1.5;
     --opacity: 0.8;
     --grid-column-end: 3;
@@ -89,7 +90,7 @@ asdasdasdas
   button {
     border: none;
     font-family: inherit;
-    background-color: white;
+    background-color: rgb(9, 185, 47);
     color:var(--button-color);
     text-decoration: none;
     padding: 30px;
