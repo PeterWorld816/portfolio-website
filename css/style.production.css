@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /*Reset the default browser stylings.
 Define your colors.
 Pick at least one font from Google Fonts.
@@ -18,37 +25,16 @@ Include at least one button somewhere on your page and give it stylings for norm
 https://codepen.io/PeterWorld-the-animator/pen/zYyyMya
 asdasdasdas
 */
-
-:root {
-  --primary-color: #cf5728;
-  --secondary-color: #e0b354;
-  --dark-grey: #2b2b2b;
-  --button-color:red;
-  --link-color:blue;
-  --font-family:'Roboto Mono',monospace;
-  --font-weight: 500;
-  --font-size: 16px;
-  --background-color:rgba(214, 221, 202, 0.205);
-  --grid-background-color: rgb(135, 219, 160);
-  --grid-item-color: rgb(0, 0, 0) #a31129;
-  --button-border-bottom:rgba(0, 0, 0, 0.3);
-  --button-text-color: rgb(226, 231, 224);
-  --button-background-color:#357b70;
-  --line-height:1.5;
-  --opacity: 0.8;
-  --grid-column-end: 3;
-  --grid-row-start: 1;
-}
 a {
-  color: var(--primary-color);
+  color: #cf5728;
 }
 
 body{
-  background-color: var(--background-color);
+  background-color: rgba(214, 221, 202, 0.205);
   font-family: 'Roboto Mono', monospace;
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
   max-width: 1000px;
   margin: auto;
 
@@ -57,10 +43,10 @@ body{
 
 
 h1{
-  font-size: var(--font-sizes);
-  font-weight: var(--font-weight);
+  font-size: undefined;
+  font-weight: 500;
   font-style: italic;
-  line-height: var(--line-height);
+  line-height: 1.5;
   text-align: center;
 }
 
@@ -69,12 +55,12 @@ h2,h3,p{
 }
 
 a {
-  color: var(--primary-color);
+  color: #cf5728;
 }
 
 a:visited {
   /* visited link */
-  color: var(--link-color);
+  color: blue;
 }
 
 a:hover {
@@ -84,22 +70,28 @@ a:hover {
 
 a:active {
   /* selected link */
-  color: var(--button-color);
+  color: red;
 }
 
 button {
   border: none;
   font-family: inherit;
-  background-color: var(--button-background-color);
-  color:var(--button-color);
+  background-color: #357b70;
+  color:red;
   text-decoration: none;
   padding: 30px;
 
 }
 
-button:hover,button:focus{
+button:hover{
   cursor: pointer;
-  opacity: var(--opacity);
+  opacity: 0.8;
+  text-align: center;
+}
+
+button:focus{
+  cursor: pointer;
+  opacity: 0.8;
   text-align: center;
 }
 
@@ -112,13 +104,20 @@ button:hover,button:focus{
 
 .page_footer {
   clear:both;
+
   display: -webkit-box;
+
   display: -ms-flexbox;
+
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+
+          -webkit-box-orient: vertical;
+
+          -webkit-box-direction: normal;
+
+              -ms-flex-direction: column;
+
+                  flex-direction: column;
   text-align: center;
   
 }
@@ -131,8 +130,11 @@ button:hover,button:focus{
 
 
 .page-header {
+
   display: -webkit-box;
+
   display: -ms-flexbox;
+
   display: flex;
   width: 100%;
   padding: 20px;
@@ -140,15 +142,21 @@ button:hover,button:focus{
 }
 
 .page-header_item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+
+          -webkit-box-flex: 0;
+
+              -ms-flex: 0 1 200px;
+
+                  flex: 0 1 200px;
 }
 
 .page-header_item:last-child {
-  -webkit-box-flex:  1;
-      -ms-flex-positive:  1;
-          flex-grow:  1;
+
+          -webkit-box-flex:  1;
+
+              -ms-flex-positive:  1;
+
+                  flex-grow:  1;
   text-align: right;
 }
 
@@ -177,8 +185,10 @@ button:hover,button:focus{
 /* Grid Starts */
 
 *{
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+ 
+          -webkit-box-sizing: border-box;
+ 
+                  box-sizing: border-box;
 }
  
 /* start grid fallback */
@@ -187,39 +197,59 @@ button:hover,button:focus{
 
 @supports (display: grid) {
   .grid {
+    
     display: -ms-grid;
+    
     display: grid;
     /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+   
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+   
     grid-template-columns: 1fr 1fr 1fr;
     
     grid-gap: 20px;
   }
 
   .grid__item {
-    background-color: var(--grid-background-color);
+    background-color: rgb(135, 219, 160);
     color:rgb(0, 0, 0)
   }
 
   .grid__item:last-child{
     
-        grid-column-start: 2;
-    -ms-grid-column-span: 1;
-    grid-column-end: var(--grid-column-end);
+        -ms-grid-column: 2;
     
-        grid-row-start: var(--grid-row-start);
+            grid-column-start: 2;
+   
+    -ms-grid-column-span: 1;
+   
+    grid-column-end: 3;
+    
+        -ms-grid-row: 1;
+    
+            grid-row-start: 1;
+   
     -ms-grid-row-span:2;
+   
     grid-row-end:3;
   }
 
   .grid__item:nth-child(2){
    
-        grid-column-start: 3;
+        -ms-grid-column: 3;
+   
+            grid-column-start: 3;
+    
     -ms-grid-column-span: 0;
-    grid-column-end: var(--grid-column-end);
+    
+    grid-column-end: 3;
 
-        grid-row-start: var(--grid-row-start);
+        -ms-grid-row: 1;
+
+            grid-row-start: 1;
+   
     -ms-grid-row-span:3;
+   
     grid-row-end:4;
   }
 
@@ -229,14 +259,18 @@ button:hover,button:focus{
 
  @media all and (max-width: 500px) {
   .grid {
+
     -ms-grid-columns: 1fr;
+
     grid-template-columns: 1fr;
   }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px){
   .grid {
+ 
     -ms-grid-columns: 1fr 20px 1fr;
+ 
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -250,36 +284,89 @@ button:hover,button:focus{
     grid-row:auto/auto;
   }
   h1{
-    font-size:var(--font-size);
+    font-size:16px;
   }
 }
 
-.button, button {
+.button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color:var(--button-background-color);
-  color:var(--button-text-color);
+  background-color:#357b70;
+  color:rgb(226, 231, 224);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   /* width of the border, type, color */
-  border-bottom: 2px solid var(--button-border-bottom);
-  -webkit-transition-duration: 0.2s;
-       -o-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+ 
+          -webkit-transition-duration: 0.2s;
+ 
+               -o-transition-duration: 0.2s;
+ 
+                  transition-duration: 0.2s;
+ 
+  -webkit-transition-property: 0.8;
+ 
+  -o-transition-property: 0.8;
+ 
+  transition-property: 0.8;
   
 }
 
-button:hover,
-button:focus,
-.button:hover,
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color:#357b70;
+  color:rgb(226, 231, 224);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+ 
+          -webkit-transition-duration: 0.2s;
+ 
+               -o-transition-duration: 0.2s;
+ 
+                  transition-duration: 0.2s;
+ 
+  -webkit-transition-property: 0.8;
+ 
+  -o-transition-property: 0.8;
+ 
+  transition-property: 0.8;
+  
+}
+
+button:hover {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button:hover {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
 .button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
@@ -312,29 +399,39 @@ button:focus,
 }
 
 .sun {
-  -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+
+          -webkit-animation: 4s color-change infinite alternate linear;
+
+                  animation: 4s color-change infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move {
   from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+
+            -webkit-transform: translate(0, 50px);
+
+                    transform: translate(0, 50px);
   }
   to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+ 
+            -webkit-transform: translate(200px, 50px);
+ 
+                    transform: translate(200px, 50px);
   }
 }
 
 @keyframes cloud-move {
   from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+  
+            -webkit-transform: translate(0, 50px);
+  
+                    transform: translate(0, 50px);
   }
   to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+
+            -webkit-transform: translate(200px, 50px);
+
+                    transform: translate(200px, 50px);
   }
 }
 /* Long version
@@ -347,32 +444,44 @@ button:focus,
 }
 */
 .cloud-front {
-  -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
+ 
+          -webkit-animation: 30s cloud-move infinite alternate linear;
+ 
+                  animation: 30s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+ 
+            -webkit-transform: translate(446px, 48px);
+ 
+                    transform: translate(446px, 48px);
   }
   to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+  
+            -webkit-transform: translate(100px, 48px);
+  
+                    transform: translate(100px, 48px); 
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+
+            -webkit-transform: translate(446px, 48px);
+
+                    transform: translate(446px, 48px);
   }
   to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+ 
+            -webkit-transform: translate(100px, 48px);
+ 
+                    transform: translate(100px, 48px);
   }
 }
 .cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
+
+          -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+
+                  animation: 34s cloud-move-reverse infinite alternate linear;
 }
