@@ -38,6 +38,9 @@ asdasdasdas
   --opacity: 0.8;
   --grid-column-end: 3;
   --grid-row-start: 1;
+  --webkit-color-0:#edc655;
+  --webkit-color-50: #fcffad;
+  --webkit-color-100: #f76414;
 }
 a {
   color: var(--primary-color);
@@ -265,7 +268,7 @@ button:hover,button:focus{
  
           transition-duration: 0.2s;
  
-  transition-property: opacity;
+  transition-property: var(--opacity);
   
 }
 
@@ -276,30 +279,30 @@ button:focus,
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
+  opacity: var(--opacity);
 }
 
 @-webkit-keyframes color-change {
   0% {
-    fill: #edc655;
+    fill: var(--webkit-color-0);
   }
   50% {
-    fill: #fcffad;
+    fill: var(--webkit-color-50);
   }
   100% {
-    fill: #f76414;
+    fill: var(--webkit-color-100);
   }
 }
 
 @keyframes color-change {
   0% {
-    fill: #edc655;
+    fill: var(--webkit-color-0);
   }
   50% {
-    fill: #fcffad;
+    fill: var(--webkit-color-50);
   }
   100% {
-    fill: #f76414;
+    fill: var(--webkit-color-100);
   }
 }
 
