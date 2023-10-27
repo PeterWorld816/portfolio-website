@@ -211,7 +211,7 @@ button:focus{
   }
 
   .grid__item {
-    background-color: rgb(135, 219, 160);
+    background-color: red;
     color:rgb(0, 0, 0)
   }
 
