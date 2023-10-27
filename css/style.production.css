@@ -26,11 +26,11 @@ https://codepen.io/PeterWorld-the-animator/pen/zYyyMya
 asdasdasdas
 */
 a {
-  color: #FFDC00;
+  color: #001F3F;
 }
 
 body{
-  background-color: #FFDC00;
+  background-color: white;
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 16px;
@@ -50,13 +50,21 @@ h1{
   text-align: center;
 }
 
-h2,h3,p{
+h2{
   text-align: center;
+  color: black;
 }
 
-a {
-  color: #FFDC00;
+h3{
+  text-align: center;
+  color: black;
 }
+
+p{
+  text-align: center;
+  color: black;
+}
+
 
 a:visited {
   /* visited link */
@@ -211,7 +219,7 @@ button:focus{
   }
 
   .grid__item {
-    background-color: #001F3F;
+    background-color: yellow;
     color:rgb(0, 0, 0)
   }
 
