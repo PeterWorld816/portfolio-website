@@ -26,11 +26,11 @@ https://codepen.io/PeterWorld-the-animator/pen/zYyyMya
 asdasdasdas
 */
 a {
-  color: #ee0000;;
+  color: #FFDC00;
 }
 
 body{
-  background-color: white;
+  background-color: #FFDC00;
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 16px;
@@ -55,12 +55,12 @@ h2,h3,p{
 }
 
 a {
-  color: #ee0000;;
+  color: #FFDC00;
 }
 
 a:visited {
   /* visited link */
-  color: blue;
+  color: #001F3F;
 }
 
 a:hover {
@@ -70,14 +70,14 @@ a:hover {
 
 a:active {
   /* selected link */
-  color: #ee0000;;
+  color: #001F3F;
 }
 
 button {
   border: none;
   font-family: inherit;
-  background-color: #ee0000;;
-  color:#ee0000;;
+  background-color: #001F3F;
+  color:#001F3F;
   text-decoration: none;
   padding: 30px;
 
@@ -211,7 +211,7 @@ button:focus{
   }
 
   .grid__item {
-    background-color: #ee0000;;
+    background-color: #001F3F;
     color:rgb(0, 0, 0)
   }
 
@@ -295,8 +295,8 @@ button:focus{
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color:#ee0000;;
-  color:rgb(226, 231, 224);
+  background-color:#001F3F;
+  color:#001F3F;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -324,8 +324,8 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color:#ee0000;;
-  color:rgb(226, 231, 224);
+  background-color:#001F3F;
+  color:#001F3F;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
