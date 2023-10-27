@@ -26,7 +26,7 @@ https://codepen.io/PeterWorld-the-animator/pen/zYyyMya
 asdasdasdas
 */
 a {
-  color: red;
+  color: #ee0000;;
 }
 
 body{
@@ -55,7 +55,7 @@ h2,h3,p{
 }
 
 a {
-  color: red;
+  color: #ee0000;;
 }
 
 a:visited {
@@ -70,14 +70,14 @@ a:hover {
 
 a:active {
   /* selected link */
-  color: red;
+  color: #ee0000;;
 }
 
 button {
   border: none;
   font-family: inherit;
-  background-color: red;
-  color:red;
+  background-color: #ee0000;;
+  color:#ee0000;;
   text-decoration: none;
   padding: 30px;
 
@@ -211,7 +211,7 @@ button:focus{
   }
 
   .grid__item {
-    background-color: red;
+    background-color: #ee0000;;
     color:rgb(0, 0, 0)
   }
 
@@ -295,7 +295,7 @@ button:focus{
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color:red;
+  background-color:#ee0000;;
   color:rgb(226, 231, 224);
   text-decoration: none;
   padding: 10px;
@@ -324,7 +324,7 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color:red;
+  background-color:#ee0000;;
   color:rgb(226, 231, 224);
   text-decoration: none;
   padding: 10px;
