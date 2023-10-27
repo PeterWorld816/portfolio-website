@@ -26,7 +26,7 @@ https://codepen.io/PeterWorld-the-animator/pen/zYyyMya
 asdasdasdas
 */
 a {
-  color: #ff0000;
+  color: red;
 }
 
 body{
@@ -76,7 +76,7 @@ a:active {
 button {
   border: none;
   font-family: inherit;
-  background-color: #357b70;
+  background-color: red;
   color:red;
   text-decoration: none;
   padding: 30px;
@@ -295,7 +295,7 @@ button:focus{
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color:#357b70;
+  background-color:red;
   color:rgb(226, 231, 224);
   text-decoration: none;
   padding: 10px;
@@ -324,7 +324,7 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color:#357b70;
+  background-color:red;
   color:rgb(226, 231, 224);
   text-decoration: none;
   padding: 10px;
